@@ -2,6 +2,7 @@ import { useLanguage } from '../../context/LanguageContext';
 import { useScrollToSection, useInViewFadeIn } from '../../hooks';
 import { Button } from '../ui';
 import { EmailIcon, ExternalLinkIcon } from '../icons';
+import { getAssetUrl } from '../../utils/assets';
 
 export function HeroSection() {
   const { t } = useLanguage();
@@ -22,7 +23,7 @@ export function HeroSection() {
           <div className="inline-block p-1 bg-card rounded-full shadow-lg">
             <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-gradient-to-br from-primary/20 to-accent-yellow/30 flex items-center justify-center overflow-hidden">
               <img
-                src="/assets/avatar.png"
+                src={getAssetUrl('assets/avatar.png')}
                 alt="Xuan's avatar"
                 className="w-full h-full object-cover"
               />
@@ -76,4 +77,3 @@ export function HeroSection() {
     </section>
   );
 }
-
