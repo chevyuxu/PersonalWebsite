@@ -2,7 +2,9 @@ import { useLanguage } from '../../context/LanguageContext';
 import { useScrollToSection, useInViewFadeIn } from '../../hooks';
 import { Button } from '../ui';
 import { EmailIcon, ExternalLinkIcon } from '../icons';
-import avatarUrl from '../../assets/avatar.png';
+import { getAssetUrl } from '../../utils/assets';
+
+const avatarUrl = getAssetUrl('assets/avatar.png');
 
 export function HeroSection() {
   const { t } = useLanguage();

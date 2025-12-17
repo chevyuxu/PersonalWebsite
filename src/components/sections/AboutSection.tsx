@@ -2,7 +2,9 @@ import { useLanguage } from '../../context/LanguageContext';
 import { useInViewFadeIn } from '../../hooks';
 import { SectionHeading, Chip } from '../ui';
 import { skills } from '../../data';
-import aboutIllustrationUrl from '../../assets/about-illustration.PNG';
+import { getAssetUrl } from '../../utils/assets';
+
+const aboutIllustrationUrl = getAssetUrl('assets/about-illustration.PNG');
 
 export function AboutSection() {
   const { t, getText } = useLanguage();
