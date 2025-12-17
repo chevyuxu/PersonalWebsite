@@ -2,7 +2,7 @@ import { useLanguage } from '../../context/LanguageContext';
 import { useInViewFadeIn } from '../../hooks';
 import { SectionHeading, Chip } from '../ui';
 import { skills } from '../../data';
-import { getAssetUrl } from '../../utils/assets';
+import aboutIllustrationUrl from '../../assets/about-illustration.PNG';
 
 export function AboutSection() {
   const { t, getText } = useLanguage();
@@ -26,7 +26,7 @@ export function AboutSection() {
                 </div>
                 {/* About illustration */}
                 <img
-                  src={getAssetUrl('assets/about-illustration.PNG')}
+                  src={aboutIllustrationUrl}
                   alt="About illustration"
                   className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"
                   onLoad={(e) => {
